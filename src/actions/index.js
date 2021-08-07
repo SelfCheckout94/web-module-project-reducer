@@ -27,8 +27,8 @@ export const saveMemory = (total) => {
   return { type: SAVE_MEMORY, payload: total };
 };
 
-export const recallMemory = (memory, total) => {
-  return { type: RECALL_MEMORY, payload: memory + total };
+export const recallMemory = (memory) => {
+  return { type: RECALL_MEMORY, payload: memory };
 };
 
 export const clearMemory = () => {

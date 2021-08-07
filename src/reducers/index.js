@@ -46,7 +46,10 @@ const reducer = (state, action) => {
     case SAVE_MEMORY:
       return { ...state, memory: action.payload };
     case RECALL_MEMORY:
-      return { ...state, total: action.payload };
+      return {
+        ...state,
+        total: calculateResult(state.total, action.payload, state.operation),
+      };
     case CLEAR_MEMORY:
       return { ...state, memory: 0 };
     default:
